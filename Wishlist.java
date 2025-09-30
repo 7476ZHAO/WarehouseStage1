@@ -7,7 +7,7 @@
  */
 
 import java.util.ArrayList;
-
+import java.util.Iterator;
 public class Wishlist {
 
     private ArrayList<WishlistItem> wantedItems = new ArrayList<>();
@@ -29,6 +29,16 @@ public class Wishlist {
 
     public int getClientID() {
         return this.clientID;
+    }
+    public Iterator getWishlist() {
+    return wantedItems.iterator();
+  }
+
+    public void Print_Wishlist() {
+        Iterator<WishlistItem> wish = getWishlist(); 
+        while (wish.hasNext()){
+            System.out.println(wish.next());
+        }
     }
 
     public static void wishlist(String[] args) {

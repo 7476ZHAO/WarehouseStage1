@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Iterator;
 public class ClientList {
     private List<Client> clients;
 
@@ -30,6 +30,15 @@ public class ClientList {
 
     public List<Client> getAllClients() {
         return clients;
+    }
+    public Iterator getAllClients2() {
+    return clients.iterator();
+    }
+    public void Print_ClientList() {
+        Iterator cli = getAllClients2();
+        while (cli.hasNext()){
+            System.out.println(cli.next());
+        }
     }
 
     @Override

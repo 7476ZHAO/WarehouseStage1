@@ -41,5 +41,17 @@ public class Stage1Test{
 
         //Printing out the item we inserted earlier
         System.out.println(wishlistA.getList().get(0).toString());
+
+        // Testing the iterator and that wishlist works
+        wishlistA.Print_Wishlist();
+        // Testing the iterator and that clientlist works
+        ClientList c_list = new ClientList();
+        Client tester = new Client("id", "name");
+        Client tester2 = new Client("id2", "name2");
+        c_list.addClient(tester);
+        c_list.addClient(tester2);
+        c_list.Print_ClientList();
+
+
     }
 }
