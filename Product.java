@@ -1,5 +1,3 @@
-package pro1;
-
 public class Product {
     // Fields
     private String name;
