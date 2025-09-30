@@ -1,5 +1,3 @@
-package pro1;
-
 import java.util.*;
 
 public class TestProductList {
