@@ -24,7 +24,7 @@ public class Stage1Test{
         WishlistItem wishlistItemA = new WishlistItem(productA.getID(), productA.getName(), 6);
 
         //Making a test client with arbitrary id and name
-        Client clientA = new Client("101", "John Doe");
+        Client clientA = new Client("101", "John Doe",100);
 
         //An array of wishlistitems is needed when making a new wishlist. In this case, the array is empty
         //This is used purely for the inital creation of the wishlist
@@ -46,8 +46,8 @@ public class Stage1Test{
         wishlistA.Print_Wishlist();
         // Testing the iterator and that clientlist works
         ClientList c_list = new ClientList();
-        Client tester = new Client("id", "name");
-        Client tester2 = new Client("id2", "name2");
+        Client tester = new Client("id", "name",250);
+        Client tester2 = new Client("id2", "name2",50);
         c_list.addClient(tester);
         c_list.addClient(tester2);
         c_list.Print_ClientList();
