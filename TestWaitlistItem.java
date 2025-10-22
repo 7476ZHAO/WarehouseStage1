@@ -1,4 +1,7 @@
-package Pro1_Warehouse;
+/**
+ *author: Jiali Zhao 
+ */
+//package Pro1_Warehouse;
 
 public class TestWaitlistItem {
 
@@ -38,3 +41,4 @@ public class TestWaitlistItem {
         System.out.println("\nCreated item2: " + item2);
     }
 }
+
