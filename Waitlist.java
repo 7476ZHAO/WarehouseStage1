@@ -1,4 +1,7 @@
-package Pro1_Warehouse;
+/**
+ *author: Jiali Zhao 
+ */
+//package Pro1_Warehouse;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -94,4 +97,5 @@ public class Waitlist {
                 ", Product: " + productId + ", Quantity: " + qty);
     }
 }
+
 
