@@ -1,4 +1,7 @@
-package Pro1_Warehouse;
+/**
+ *author: Jiali Zhao 
+ */
+//package Pro1_Warehouse;
 
 public class TestWaitlist {
 
@@ -36,3 +39,4 @@ public class TestWaitlist {
         waitlist.printWaitlist();
     }
 }
+
