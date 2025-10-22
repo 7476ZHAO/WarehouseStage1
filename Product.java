@@ -6,7 +6,7 @@ public class Product {
     private String id;
     private double price;
     private double stock;
-    private List<WaitlistItem> waitlist = new ArrayList<>();
+    private Waitlist waitlist = new Waitlist();// Each product has its own waitlist
 
     // Constructor (id is auto-generated)
     public Product(String name, double price, double stock) {
@@ -33,6 +33,10 @@ public class Product {
         return stock;
     }
 
+    public Waitlist getWaitlist() { // for ReceivingShipment
+        return waitlist; 
+    }
+
     // Setters
     public void setName(String name) {
         this.name = name;
@@ -46,10 +50,16 @@ public class Product {
         this.stock = stock;
     }
 
+    // Add a client to this product’s waitlist
+    public void addWaitlistItem(String clientId, int quantity) {
+        waitlist.addItem(clientId, this.id, quantity);
+    }
+
     // Print product info
     @Override
     public String toString() {
         return "Product[ID=" + id + ", Name=" + name + ", Price=" + price + ", Stock=" + stock + "]";
     }
 }
+
 
