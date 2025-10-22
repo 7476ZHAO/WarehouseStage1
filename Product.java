@@ -55,11 +55,18 @@ public class Product {
         waitlist.addItem(clientId, this.id, quantity);
     }
 
+    public void processWaitlist(int qty) {
+        int remaining = getWaitlist().fulfillItems(qty);
+        setStock(getStock() + remaining);
+    }
+
+
     // Print product info
     @Override
     public String toString() {
         return "Product[ID=" + id + ", Name=" + name + ", Price=" + price + ", Stock=" + stock + "]";
     }
 }
+
 
 
