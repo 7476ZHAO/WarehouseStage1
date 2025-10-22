@@ -14,13 +14,13 @@ public class ReceivingShipment {
         }
 
         double oldStock = product.getStock();
-        product.setStock(oldStock + qty);
+        //product.setStock(oldStock + qty); ----already included in processWaitlist
 
         System.out.println("Shipment received for " + productName);
         System.out.println("Old stock: " + oldStock);
 
         // calling the processWaitlist function for later implementation of waitlist
-        product.processWaitlist();
+        product.processWaitlist(qty);
 
         System.out.println("New stock: " + product.getStock());
     }
