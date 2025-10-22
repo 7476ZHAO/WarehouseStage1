@@ -1,4 +1,7 @@
-package Pro1_Warehouse;
+/**
+ *author: Jiali Zhao 
+ */
+//package Pro1_Warehouse;
 
 import java.util.Date;
 
@@ -62,3 +65,4 @@ public class WaitlistItem {
                 '}';
     }
 }
+
