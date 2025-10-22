@@ -27,7 +27,7 @@ public class Waitlist {
                 return;
             }
         }
-        items.add(new WaitlistItem(clientId, productId, quantity));
+        items.add(new WaitlistItem(clientId, productId, quantity)); // .add() is a built-in method in java for list data type
     }
 
     /**
@@ -97,5 +97,6 @@ public class Waitlist {
                 ", Product: " + productId + ", Quantity: " + qty);
     }
 }
+
 
 
