@@ -6,6 +6,7 @@ public class Product {
     private String id;
     private double price;
     private double stock;
+    private List<WaitlistItem> waitlist = new ArrayList<>();
 
     // Constructor (id is auto-generated)
     public Product(String name, double price, double stock) {
@@ -51,3 +52,4 @@ public class Product {
         return "Product[ID=" + id + ", Name=" + name + ", Price=" + price + ", Stock=" + stock + "]";
     }
 }
+
