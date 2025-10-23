@@ -6,7 +6,7 @@ public class ReceivingShipment {
     }
 
     // Receive shipment by product name (case-insensitive)
-    public void receiveShipment(String productName, double qty) {
+    public void receiveShipment(String productName, int qty) {
         Product product = findProductByName(productName);
         if (product == null) {
             System.out.println("Sorry! Product not found: " + productName);

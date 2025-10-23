@@ -14,9 +14,9 @@ public class ProductList {
     }
 
     // Search product by ID, returns Product if found, null if not
-    public Product search(String productID) {
+    public Product search(String productName) {
         for (Product p : productsList) {
-            if (p.getID().equals(productID)) {
+            if (p.getName().equals(productName)) {
                 return p;
             }
         }

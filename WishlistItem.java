@@ -23,6 +23,13 @@ public class WishlistItem {
         return this.itemId;
     }
 
+    public String getItemName() {
+        return this.itemName;
+    }
+       public int getQuantity() {
+        return this.desiredQuantity;
+    }
+
     public static void main(String[] args) {
 
     }

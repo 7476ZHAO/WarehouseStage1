@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Iterator;
 public class Client {
     private String id;
     private String name;
-    private List<Product> wishlist;
+    private List<WishlistItem> wishlist;
     private float balance;
 
     public Client(String id, String name, float startingBalance) {
@@ -34,14 +34,13 @@ public class Client {
 
 
     // Wishlist operations
-    public void addToWishlist(Product product) {
-        wishlist.add(product);
+    public void addToWishlist(WishlistItem wishlistitem) {
+        wishlist.add(wishlistitem);
     }
 
-    public List<Product> getWishlist() {
+    public List<WishlistItem> getWishlist() {
         return wishlist;
     }
-
     @Override
     public String toString() {
         return "Client id = " + id + " name = " + name + " balance = " + balance;
