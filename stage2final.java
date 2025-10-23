@@ -102,7 +102,7 @@ while (!endMenu) {
                         product.setStock(0);
                         clientToProcess.addToBalance((float)(-(available * product.getPrice())));
                         }
-                        product.addWaitlistItem(clientToProcess.getId(), waitQty);
+                        waitlist.addItem(clientToProcess.getId(), product.getID(), waitQty);
                         }
                 }
 
