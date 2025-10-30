@@ -71,7 +71,7 @@ public class stage2final {
                     System.out.println("How many should we add to the list?");
                     int Amount_Added = menuInput.nextInt();
                     Product currentProduct = p_list.search(nextProduct);
-                    Client currentClient = c_list.getClient(nextClient);
+                    Client currentClient = c_list.search(nextClient);
                     String currentName = currentProduct.getName();
                     String currentId = currentProduct.getID();
                     WishlistItem newItem = new WishlistItem(currentId, currentName, Amount_Added);
@@ -82,7 +82,7 @@ public class stage2final {
                 case 6:
                     System.out.println("Who's wishlist are we processing?(use id)");
                     String nextWish = menuInput.nextLine();
-                    Client clientToProcess = c_list.getClient(nextWish);
+                    Client clientToProcess = c_list.search(nextWish);
                     List<WishlistItem> wishlist = clientToProcess.getWishlist();
                     if (wishlist.isEmpty()) {
                         System.out.println("break1");
@@ -130,7 +130,7 @@ public class stage2final {
                     String toAdd = menuInput.nextLine();
                     System.out.println("How much?");
                     float increase = menuInput.nextFloat();
-                    Client clientToProcess2 = c_list.getClient(toAdd);
+                    Client clientToProcess2 = c_list.search(toAdd);
                     clientToProcess2.addToBalance(increase);
                     System.out.println(clientToProcess2.getBalance() + " is the current balance");
                     break;
