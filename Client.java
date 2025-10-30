@@ -1,12 +1,15 @@
+//package Pro1_Warehouse;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
+
 public class Client {
     private String id;
     private String name;
-    private Wishlist<WishlistItem> wishlist;
+    private Wishlist<Product> wishlist;
     private float balance;
     private List<Transaction> transactions = new ArrayList<>();
+    private List<Invoice> invoices = new ArrayList<>();
 
     public Client(String id, String name, float startingBalance) {
         this.id = id;
@@ -35,26 +38,39 @@ public class Client {
 
 
     // Wishlist operations
-    public void addToWishlist(WishlistItem wishlistitem) {
-        wishlist.add(wishlistitem);
+    public void addToWishlist(Product product) {
+        wishlist.add(product);
     }
 
-    public Wishlist<WishlistItem> getWishlist() {
+    public Wishlist<Product> getWishlist() {
         return wishlist;
     }
 
+    // --- Add a new invoice ---
+    public void addInvoice(Invoice invoice) {
+        invoices.add(invoice);
+    }
+
+    // --- Add a transaction ---
     public void addTransaction(String description, double amount) {
         transactions.add(new Transaction(description, amount));
     }
     
+    // ---print all invoices for debugging or testing ---
+    public void printInvoices() {
+        System.out.println("Invoices for client " + name + ":");
+        for (Invoice inv : invoices) {
+            System.out.println("  " + inv.getId() + " | Total: $" + inv.getTotalCost());
+        }
+    }
     public void printTransactions() {
         for (Transaction t : transactions) {
             System.out.println(t);
         }
     }
+
     @Override
     public String toString() {
         return "Client id = " + id + " name = " + name + " balance = " + balance;
     }
 }
-
