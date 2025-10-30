@@ -6,7 +6,7 @@ import java.util.List;
 public class Client {
     private String id;
     private String name;
-    private Wishlist<Product> wishlist;
+    private Wishlist wishlist = new Wishlist();
     private float balance;
     private List<Transaction> transactions = new ArrayList<>();
     private List<Invoice> invoices = new ArrayList<>();
@@ -42,7 +42,7 @@ public class Client {
         wishlist.add(product);
     }
 
-    public Wishlist<Product> getWishlist() {
+    public Wishlist getWishlist() {
         return wishlist;
     }
 
@@ -74,3 +74,4 @@ public class Client {
         return "Client id = " + id + " name = " + name + " balance = " + balance;
     }
 }
+
