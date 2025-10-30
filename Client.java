@@ -4,8 +4,9 @@ import java.util.Iterator;
 public class Client {
     private String id;
     private String name;
-    private List<WishlistItem> wishlist;
+    private Wishlist<WishlistItem> wishlist;
     private float balance;
+    private List<Transaction> transactions = new ArrayList<>();
 
     public Client(String id, String name, float startingBalance) {
         this.id = id;
@@ -38,11 +39,22 @@ public class Client {
         wishlist.add(wishlistitem);
     }
 
-    public List<WishlistItem> getWishlist() {
+    public Wishlist<WishlistItem> getWishlist() {
         return wishlist;
+    }
+
+    public void addTransaction(String description, double amount) {
+        transactions.add(new Transaction(description, amount));
+    }
+    
+    public void printTransactions() {
+        for (Transaction t : transactions) {
+            System.out.println(t);
+        }
     }
     @Override
     public String toString() {
         return "Client id = " + id + " name = " + name + " balance = " + balance;
     }
 }
+
