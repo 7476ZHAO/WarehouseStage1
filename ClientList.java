@@ -19,7 +19,7 @@ public class ClientList {
         return true;
     }
 
-    public Client getClient(String id) {
+    public Client search(String id) {
         for (Client c : clients) {
             if (c.getId().equals(id)) {
                 return c;
@@ -46,3 +46,4 @@ public class ClientList {
         return clients.toString();
     }
 }
+
