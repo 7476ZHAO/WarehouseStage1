@@ -45,33 +45,6 @@ public class Waitlist {
     }
 
     /**
-     * Fulfill as many waitlist items as possible with the available stock.
-     * Generates invoices for fully or partially filled items.
-     * Returns remaining stock after filling the waitlist.
-     */
-    public int fulfillItems(int availableQty) {
-        Iterator<WaitlistItem> iterator = items.iterator();
-
-        while (iterator.hasNext() && availableQty > 0) {
-            WaitlistItem item = iterator.next();
-            int need = item.getQuantity();
-
-            if (availableQty >= need) {
-                // Full fill
-                generateInvoice(item.getClientId(), item.getProductId(), need);
-                availableQty -= need;
-                iterator.remove();  // remove fulfilled item
-            } else {
-                // Partial fill
-                generateInvoice(item.getClientId(), item.getProductId(), availableQty);
-                item.setQuantity(need - availableQty);
-                availableQty = 0;
-            }
-        }
-        return availableQty; // any leftover stock
-    }
-
-    /**
      * Display the waitlist for this product.
      */
     public void printWaitlist() {
@@ -97,6 +70,7 @@ public class Waitlist {
                 ", Product: " + productId + ", Quantity: " + qty);
     }
 }
+
 
 
 
