@@ -1,4 +1,4 @@
-package Pro1_Warehouse;
+//package Pro1_Warehouse;
 
 import java.io.*;
 import java.util.*;
@@ -184,3 +184,4 @@ public class Warehouse implements Serializable {
         clientList.Print_ClientList();
     }
 }
+
